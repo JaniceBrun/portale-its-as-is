@@ -9,24 +9,24 @@ Parameters:
 
 Resources:
 
-  SiteBucket:
+  SitoBucket:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: portale-its-sito
-      WebsiteConfiguration:
-        IndexDocument: index.html
-
-  SiteBucketPolicy:
-    Type: AWS::S3::BucketPolicy
-    Properties:
-      Bucket: !Ref SiteBucket
-      PolicyDocument:
-        Version: '2012-10-17'
-        Statement:
-          - Effect: Allow
-            Principal: '*'
-            Action: 's3:*'
-            Resource: !Sub '${SiteBucket.Arn}/*'
+      BucketName: !Sub "portale-its-${AWS::AccountId}"
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
+      VersioningConfiguration:
+        Status: Enabled
+      Tags:
+        - Key: Progetto
+          Value: portale-its
 
   IscrizioniTable:
     Type: AWS::DynamoDB::Table
