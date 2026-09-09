@@ -1,0 +1,10 @@
+Impostazioni portale (NON cancellare)
+
+FTP_HOST=esempiomiao
+FTP_USER=esempiomiao
+FTP_PASS=esempiomiao
+
+# chiave per l'integrazione col gestionale
+api_token = esempiomiao
+
+Ultimo aggiornamento: Marco, marzo 2024
