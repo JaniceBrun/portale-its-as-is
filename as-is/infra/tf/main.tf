@@ -18,8 +18,9 @@ provider "aws" {
 }
 
 variable "api_token_gestionale" {
-  type    = string
-  default = "ghp_1a2B3c4D5e6F7g8H9i0JklMnOpQrStUvWxYz"
+  type        = string
+  description = "Token per il gestionale. Non hardcodare; passare tramite TF var o TF_VAR_api_token_gestionale"
+  sensitive   = true
 }
 
 data "aws_caller_identity" "corrente" {}
