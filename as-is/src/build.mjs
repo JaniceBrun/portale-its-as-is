@@ -3,8 +3,12 @@ import { readFileSync, writeFileSync, mkdirSync, cpSync, existsSync } from "node
 
 const OUT = "dist";
 
+function getOreTotali(corso) {
+  return Number(corso.oreTotali ?? corso.ore_totali ?? corso.ore ?? 0);
+}
+
 export function totaleOre(corsi) {
-  return corsi.slice(1).reduce((acc, c) => acc + c.ore, 0);
+  return corsi.reduce((acc, c) => acc + getOreTotali(c), 0);
 }
 
 export function render(dati, versione) {
@@ -14,7 +18,7 @@ export function render(dati, versione) {
       (c) => `      <tr>
         <td class="cod">${c.codice}</td>
         <td>${c.titolo}</td>
-        <td class="ore">${c.ore} h</td>
+        <td class="ore">${getOreTotali(c)} h</td>
       </tr>`
     )
     .join("\n");

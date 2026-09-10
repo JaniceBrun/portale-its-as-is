@@ -5,38 +5,65 @@
     {
       "codice": "SOA-FW",
       "titolo": "Firewall",
-      "ore": 60,
-      "docente": "P. Costanzo"
+      "oreTotali": 60,
+      "docente": "P. Costanzo",
+      "unita": [
+        { "codice": "UF-01", "nome": "Fondamenti firewall", "ore": 20 },
+        { "codice": "UF-02", "nome": "Regole e policy", "ore": 20 },
+        { "codice": "UF-03", "nome": "Monitoraggio e sicurezza", "ore": 20 }
+      ]
     },
     {
       "codice": "SOA-SE",
       "titolo": "Servizi Esposti",
-      "ore": 40,
-      "docente": "P. Costanzo"
+      "oreTotali": 40,
+      "docente": "P. Costanzo",
+      "unita": [
+        { "codice": "UF-01", "nome": "Exposition pattern", "ore": 20 },
+        { "codice": "UF-02", "nome": "Protezione dei servizi", "ore": 20 }
+      ]
     },
     {
       "codice": "SOA-ID",
       "titolo": "Incident Detection & Response",
-      "ore": 36,
-      "docente": "P. Costanzo"
+      "oreTotali": 36,
+      "docente": "P. Costanzo",
+      "unita": [
+        { "codice": "UF-01", "nome": "Rilevamento incidenti", "ore": 18 },
+        { "codice": "UF-02", "nome": "Risposta e containment", "ore": 18 }
+      ]
     },
     {
       "codice": "ACA-ARC",
       "titolo": "Architettura e Progettazione",
-      "ore": 48,
-      "docente": "P. Costanzo"
+      "oreTotali": 48,
+      "docente": "P. Costanzo",
+      "unita": [
+        { "codice": "UF-01", "nome": "Analisi architetturale", "ore": 24 },
+        { "codice": "UF-02", "nome": "Progettazione dei sistemi", "ore": 24 }
+      ]
     },
     {
       "codice": "ACA-IAC",
       "titolo": "Infrastructure as Code",
-      "ore": 60,
-      "docente": "P. Costanzo"
+      "oreTotali": 60,
+      "docente": "P. Costanzo",
+      "unita": [
+        { "codice": "UF-01", "nome": "Terraform e modelli", "ore": 20 },
+        { "codice": "UF-02", "nome": "Automazione infrastrutturale", "ore": 20 },
+        { "codice": "UF-03", "nome": "Best practices", "ore": 20 }
+      ]
     },
     {
       "codice": "ACA-AUT",
       "titolo": "Automation e Pipeline con AWS",
-      "ore": 76,
-      "docente": "P. Costanzo"
+      "oreTotali": 76,
+      "docente": "P. Costanzo",
+      "unita": [
+        { "codice": "UF-01", "nome": "Pipeline CI/CD", "ore": 26 },
+        { "codice": "UF-02", "nome": "Automazione AWS", "ore": 25 },
+        { "codice": "UF-03", "nome": "Sicurezza pipeline", "ore": 25 }
+      ]
     }
   ]
 }
